@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-app>
         <header>
             <!--
             <nav>
@@ -26,7 +26,7 @@
                 <a href="linkedin"></a>
             </ul>
         </footer>
-    </div>
+    </v-app>
 </template>
 
 <script setup lang="ts">
@@ -35,7 +35,5 @@
 </script>
 
 <style scoped>
-    .router-link-exact-active {
-        color:#12b488;
-    }
+
 </style>
