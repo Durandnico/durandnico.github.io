@@ -50,6 +50,6 @@ footer {
     bottom: 40px;
     right:25px;
     z-index: 100;
-    color:white
+    color:white;
 }
 </style>

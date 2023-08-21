@@ -21,4 +21,8 @@
 a:visited {
     color:inherit;
 }
+
+a {
+    color:white;
+}
 </style>

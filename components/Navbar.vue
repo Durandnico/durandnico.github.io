@@ -1,20 +1,21 @@
 <template>
     <nav class="header-nav">
         <v-toolbar flat app dark color="#222222">
-            <span class="title pl-10 font-weight-bold c-white" @click="{navMenu = 1; navigateTo('/')}">DURAND Nicolas</span>
-            
-            <v-spacer></v-spacer>
+            <div class="test">
+
+                <span class="title pl-10 font-weight-bold c-white pa-4" @click="{navMenu = 1; navigateTo('/')}">DURAND Nicolas</span>
+                
             <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-24" v-model="navMenu">
                 <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">Home</v-tab>
                 <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1 c-white">Cv</v-tab>
                 <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 c-white">projects</v-tab>
                 <v-tab :value="4" @click="navigateTo('/about')" class="pa-6 ml-1 mr-16 c-white">about</v-tab>
             </v-tabs>
-            <v-spacer :class="{hidden: width < 1600 }"></v-spacer>
             
-            <SocialMedia v-if="width >= 1600" class="pr-12" />
+            <SocialMedia v-if="width >= 1600" class="pa-4 pr-12" />
 
             <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
+        </div>
         </v-toolbar>
 
         <v-navigation-drawer app dark color="#222222" v-model="drawer" class="hidden-md-and-up">
@@ -22,9 +23,9 @@
                     <v-list-item-title class="title font-weight-bold">
                         Durand Nicolas
                     </v-list-item-title>
-            </v-list-item>
-
-            <v-divider></v-divider>
+                </v-list-item>
+                
+                <v-divider></v-divider>
             
                 <v-list nav>
                         <v-list-item @click="{drawer = false; navigateTo('/'); test=1}" class="hv">
@@ -77,6 +78,12 @@ switch (useRoute().path){
 
 <style scoped>
 
+.test {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
 .header-nav {
     z-index: 99;
 }
