@@ -1,39 +1,55 @@
 <template>
     <v-app>
         <header>
-            <!--
-            <nav>
-                <NuxtLink to="/">Durand Nicolas</NuxtLink>
-                <v-card>
-    <v-tabs color="deep-purple-accent-4" align-tabs="end">
-        <v-tab :value="1" @click="test('/')">Home</v-tab>
-       <v-tab :value="3" @click="test('/projects')">projects</v-tab>
-       <v-tab :value="2" @click="test('/about')">about</v-tab>
-    </v-tabs>
-  </v-card>
-            </nav>-->
             <Navbar />
-            
         </header>
 
-        <div>
+        <div class="main">
+            <div class="mypadding"></div>
             <slot />
         </div>
-
+        
         <footer>
-            <ul>
-                <a href="github"></a>
-                <a href="linkedin"></a>
-            </ul>
+            <SocialMedia v-if="width < 1600"/>
         </footer>
     </v-app>
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
 
+const { width } = useDisplay()
 
 </script>
 
-<style scoped>
+<style>
 
+.main {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    top:0;
+    font-family: "ROBOTO", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #1e1f26;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mypadding {
+    position: relative;
+    min-height: 64px;
+}
+
+footer {
+    position: absolute;
+    bottom: 40px;
+    right:25px;
+    z-index: 100;
+    color:white
+}
 </style>

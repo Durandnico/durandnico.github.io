@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <h1>project</h1>
+    <div class="main">
+
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 </script>
 

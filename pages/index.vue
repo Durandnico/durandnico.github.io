@@ -1,5 +1,4 @@
 <template>
-    <div class="home">
         <section class="nav">
             <h1>Durand Nicolas</h1>
             <h3 class="span loader">
@@ -29,34 +28,25 @@
                 <span class="m">e</span>
             </h3>
         </section>
-    </div>
 </template>
 
+<script setup lang="ts">
 
+</script>
 
 
 <style scoped>
 
-.home {
-    position: absolute;
-    width: 100vw;
-    font-family: "ROBOTO", sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .nav {
-  position: absolute;
+  position:inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 93.14vh;
-  width: 100vw;
-  background-color: #1e1f26;
   text-align: center;
-  padding: 0 2em;
+  height: 100%;
+  width: 100%;
 }
 
 .nav h1,

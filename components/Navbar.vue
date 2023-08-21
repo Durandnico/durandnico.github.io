@@ -1,10 +1,10 @@
 <template>
     <nav class="header-nav">
         <v-toolbar flat app dark color="#222222">
-            <span class="title pl-10 font-weight-bold c-white">DURAND Nicolas</span>
+            <span class="title pl-10 font-weight-bold c-white" @click="{navMenu = 1; navigateTo('/')}">DURAND Nicolas</span>
             
             <v-spacer></v-spacer>
-            <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-64">
+            <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-24" v-model="navMenu">
                 <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">Home</v-tab>
                 <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1 c-white">Cv</v-tab>
                 <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 c-white">projects</v-tab>
@@ -12,6 +12,8 @@
             </v-tabs>
             <v-spacer :class="{hidden: width < 1600 }"></v-spacer>
             
+            <SocialMedia v-if="width >= 1600" class="pr-12" />
+
             <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-toolbar>
 
@@ -52,9 +54,24 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const drawer = ref(false);
 const test = ref(null)
+const navMenu = ref(0)
 
 
+switch (useRoute().path){
+    
+    case'/about':
+        navMenu.value++;
+    case'/projects':
+        navMenu.value++;
+    case '/cv':
+        navMenu.value++;
+    case'/':
+        navMenu.value++;
+        break;
 
+    default:
+        console.log('error');
+}
 
 </script>
 
