@@ -3,16 +3,16 @@
         <v-toolbar flat app dark color="#222222">
             <div class="test">
 
-                <span class="title pl-10 font-weight-bold c-white pa-4" @click="{navMenu = 1; navigateTo('/')}">DURAND Nicolas</span>
+                <span class="title pl-10 font-weight-bold c-white pa-4" @click="navigateTo('/')">DURAND Nicolas</span>
                 
-            <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-24" v-model="navMenu">
+            <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-24">
                 <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">Home</v-tab>
                 <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1 c-white">Cv</v-tab>
                 <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 c-white">projects</v-tab>
                 <v-tab :value="4" @click="navigateTo('/about')" class="pa-6 ml-1 mr-16 c-white">about</v-tab>
             </v-tabs>
             
-            <SocialMedia v-if="width >= 1600" class="pa-4 pr-12" />
+            <SocialMedia class="pa-4 pr-12 hidden-md-and-down" />
 
             <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
         </div>
@@ -28,19 +28,19 @@
                 <v-divider></v-divider>
             
                 <v-list nav>
-                        <v-list-item @click="{drawer = false; navigateTo('/'); test=1}" class="hv">
+                        <v-list-item @click="{drawer = false; navigateTo('/');}" class="hv">
                             <span class="pa-4 ml-2 pr-32">home</span>
                         </v-list-item>
 
-                        <v-list-item @click="{drawer = false; navigateTo('/cv'); test=2}" class="hv">
+                        <v-list-item @click="{drawer = false; navigateTo('/cv');}" class="hv">
                             <span class="pa-4 ml-2 pr-32">CV</span>
                         </v-list-item>
 
-                        <v-list-item @click="{drawer = false; navigateTo('/projects'); test=2}" class="hv">
+                        <v-list-item @click="{drawer = false; navigateTo('/projects');}" class="hv">
                             <span class="pa-4 ml-2 pr-32">projects</span>
                         </v-list-item>
 
-                        <v-list-item  @click="{drawer = false; navigateTo('/about'); test=3}" class="hv">
+                        <v-list-item  @click="{drawer = false; navigateTo('/about');}" class="hv">
                             <span class="pa-4 ml-2 pr-32">about</span>
                         </v-list-item>
 
@@ -49,30 +49,14 @@
     </nav>
 </template>
 
-<script setup lang="ts">
-import { useDisplay } from 'vuetify'
-
-const { width } = useDisplay()
-const drawer = ref(false);
-const test = ref(null)
-const navMenu = ref(0)
-
-
-switch (useRoute().path){
-    
-    case'/about':
-        navMenu.value++;
-    case'/projects':
-        navMenu.value++;
-    case '/cv':
-        navMenu.value++;
-    case'/':
-        navMenu.value++;
-        break;
-
-    default:
-        console.log('error');
+<script lang="ts">
+export default {
+    data: () => ({
+        drawer: false
+    })
 }
+
+const test = ref(null)
 
 </script>
 

@@ -10,7 +10,7 @@
         </div>
         
         <footer>
-            <SocialMedia v-if="width < 1600"/>
+            <SocialMedia class="hidden-lg-and-up" />
         </footer>
     </v-app>
 </template>
