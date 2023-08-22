@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "touch .output/public/.nojekyll & push-dir --dir=.output/public --branch=gh-pages --cleanup"
+    "deploy": "(cd .output/public/ && git init && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -m  'deploy' && git push --force git@github.com:Durandnico/durandnico.github.io.git gh-pages && rm -fr .git)"
   },
   "devDependencies": {
     "@invictus.codes/nuxt-vuetify": "^0.3.0",
@@ -20,7 +20,6 @@
   "dependencies": {
     "@mdi/font": "^7.2.96",
     "mdi": "^2.2.43",
-    "push-dir": "^0.4.1",
     "sass": "^1.66.0"
   }
 }
