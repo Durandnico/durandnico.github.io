@@ -58,6 +58,7 @@ export default defineComponent({
 .title {
     position: absolute;
     z-index: 10;
-    left: 30px;
+    width: 100%;
+    text-align: center;
 }
 </style>

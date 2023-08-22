@@ -22,7 +22,7 @@ h2 {
 
 .main {
     position: relative;
-    width: 75%;
+    max-width: 75%;
     margin: 0 auto;
     margin-top: 2rem;
     gap:1.5rem;
