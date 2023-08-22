@@ -18,6 +18,11 @@
 
 <style>
 
+* {
+
+    color: #c6d0f5
+}
+
 .main {
     position: absolute;
     width: 100vw;

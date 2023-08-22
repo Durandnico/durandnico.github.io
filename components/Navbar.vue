@@ -8,7 +8,7 @@
             <v-tabs color="#a6e3a1" dark class="hidden-sm-and-down -ml-24" v-model="navMenu" >
                 <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">HOME</v-tab>
                 <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1">CV</v-tab>
-                <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 case-upper ">projects</v-tab>
+                <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 case-upper ">PROJECTS</v-tab>
                 <v-tab :value="4" @click="navigateTo('/about')" class="pa-6 ml-1 mr-16">README.md</v-tab>
             </v-tabs>
             
