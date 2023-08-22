@@ -47,6 +47,10 @@ export default defineComponent({
 
 <style scoped>
 
+* {
+    color: #c6d0f5
+}
+
 .card {
     max-width: 250px;
 }

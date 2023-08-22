@@ -18,10 +18,6 @@
 
 <style>
 
-* {
-
-    color: #c6d0f5
-}
 
 .main {
     position: absolute;
