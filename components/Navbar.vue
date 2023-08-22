@@ -55,9 +55,6 @@ export default {
         drawer: false
     })
 }
-
-const test = ref(null)
-
 </script>
 
 <style scoped>
