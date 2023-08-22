@@ -1,13 +1,15 @@
 <template>
-    <div class="main">
+    <div>
 
     </div>
 </template>
 
-<script setup>
-
+<script lang="ts">
+    export default {
+        
+    }
 </script>
 
 <style scoped>
-    
+
 </style>

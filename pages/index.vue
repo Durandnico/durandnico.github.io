@@ -2,36 +2,20 @@
         <section class="nav">
             <h1>Durand Nicolas</h1>
             <h3 class="span loader">
-                <span class="m">C</span>
-                <span class="m">o</span>
-                <span class="m">d</span>
-                <span class="m">i</span>
-                <span class="m">n</span>
-                <span class="m">g</span>
-                <span class="m">&nbsp;</span>
-                <span class="m">N</span>
-                <span class="m">'</span>
-                <span class="m">&nbsp;</span>
-                <span class="m">R</span>
-                <span class="m">u</span>
-                <span class="m">n</span>
-                <span class="m">n</span>
-                <span class="m">i</span>
-                <span class="m">n</span>
-                <span class="m">g</span>
-                <span class="m">&nbsp;</span>
-                <span class="m">4</span>
-                <span class="m">&nbsp;</span>
-                <span class="m">L</span>
-                <span class="m">i</span>
-                <span class="m">f</span>
-                <span class="m">e</span>
+
+                <span v-for="letter in sub_title" :key="letter" class="m">{{letter}}</span>
+                
             </h3>
         </section>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 
+export default {
+  data: () => ({
+    sub_title: "Engineer of tomorrow"
+  })
+}
 </script>
 
 
@@ -56,13 +40,13 @@
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.5rem;
-  color: #03dac6;
+  color: #91d7e3;
   transition: all 0.3s ease;
   z-index: 3;
 }
 h1:hover {
   transform: translate3d(0, -10px, 22px);
-  color: #ff0266;
+  color: #ed8796;
 }
 
 h3.span {
@@ -70,11 +54,11 @@ h3.span {
   letter-spacing: 0.7em;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
-  color: #faebd7;
+  color: #b8c0e0;
   z-index: 4;
 }
 span:hover {
-  color: #ff0266;
+  color: #ed8796;
   font-weight: 500;
   font-size: 2.2vw;
 }

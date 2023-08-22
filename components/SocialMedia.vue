@@ -18,11 +18,8 @@
     gap: 12px;
 }
 
-a:visited {
-    color:inherit;
+a, a:visited {
+    color:#f4dbd6;
 }
 
-a {
-    color:white;
-}
 </style>

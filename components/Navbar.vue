@@ -1,15 +1,15 @@
 <template>
     <nav class="header-nav">
-        <v-toolbar flat app dark color="#222222">
+        <v-toolbar flat app dark color="rgb(36, 39, 58, 0.7)">
             <div class="test">
 
-                <span class="title pl-10 font-weight-bold c-white pa-4" @click="navigateTo('/')">DURAND Nicolas</span>
+                <span class="title pl-10 font-weight-bold pa-4" @click="{navMenu = 1; navigateTo('/')}">> durandnico.github.io</span>
                 
-            <v-tabs color="#07a70f" dark class="hidden-sm-and-down -ml-24">
-                <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">Home</v-tab>
-                <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1 c-white">Cv</v-tab>
-                <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 c-white">projects</v-tab>
-                <v-tab :value="4" @click="navigateTo('/about')" class="pa-6 ml-1 mr-16 c-white">about</v-tab>
+            <v-tabs color="#a6e3a1" dark class="hidden-sm-and-down -ml-24" v-model="navMenu" >
+                <v-tab :value="1" @click="navigateTo('/')" class="pr-6 ml-1 mr-1">HOME</v-tab>
+                <v-tab :value="2" @click="navigateTo('/cv')" class="pa-6 ml-1 mr-1">CV</v-tab>
+                <v-tab :value="3" @click="navigateTo('/projects')" class="pa-6 ml-1 mr-1 case-upper ">projects</v-tab>
+                <v-tab :value="4" @click="navigateTo('/about')" class="pa-6 ml-1 mr-16">README.md</v-tab>
             </v-tabs>
             
             <SocialMedia class="pa-4 pr-12 hidden-md-and-down" />
@@ -18,7 +18,7 @@
         </div>
         </v-toolbar>
 
-        <v-navigation-drawer app dark color="#222222" v-model="drawer" class="hidden-md-and-up">
+        <v-navigation-drawer app dark color="#303446" v-model="drawer" class="hidden-md-and-up">
             <v-list-item class=ma-3>
                     <v-list-item-title class="title font-weight-bold">
                         Durand Nicolas
@@ -29,7 +29,7 @@
             
                 <v-list nav>
                         <v-list-item @click="{drawer = false; navigateTo('/');}" class="hv">
-                            <span class="pa-4 ml-2 pr-32">home</span>
+                            <span class="pa-4 ml-2 pr-32">HOME</span>
                         </v-list-item>
 
                         <v-list-item @click="{drawer = false; navigateTo('/cv');}" class="hv">
@@ -37,11 +37,11 @@
                         </v-list-item>
 
                         <v-list-item @click="{drawer = false; navigateTo('/projects');}" class="hv">
-                            <span class="pa-4 ml-2 pr-32">projects</span>
+                            <span class="pa-4 ml-2 pr-32">PROJECTS</span>
                         </v-list-item>
 
                         <v-list-item  @click="{drawer = false; navigateTo('/about');}" class="hv">
-                            <span class="pa-4 ml-2 pr-32">about</span>
+                            <span class="pa-4 ml-2 pr-32">README.md</span>
                         </v-list-item>
 
                 </v-list>
@@ -52,12 +52,17 @@
 <script lang="ts">
 export default {
     data: () => ({
-        drawer: false
+        drawer: false,
+        navMenu: null
     })
 }
 </script>
 
 <style scoped>
+
+.v-tab {
+    text-transform: none;
+}
 
 .test {
     display:flex;
@@ -81,11 +86,11 @@ export default {
 }
 
 .router-link-exact-active {
-    color:#12b488;
+    color:#a6d189;
 }
 
 :not(.router-link-exact-active) {
-    color: white
+    color: #c6d0f5
 }
 
 .hv:hover{

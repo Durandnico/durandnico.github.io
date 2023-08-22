@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0;
     color: white;
-    background-color: #1e1f26;
+    background-color: #363a4f;
     display: flex;
     flex-direction: column;
 }
