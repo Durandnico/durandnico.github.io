@@ -83,6 +83,7 @@ export default {
     letter-spacing: 0;
     line-height: 1.75rem;
     text-transform: none;
+    color: #a5adcb !important;
 }
 
 .router-link-exact-active {

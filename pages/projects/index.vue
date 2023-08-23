@@ -1,9 +1,21 @@
 <template>
-    <h2>Projects</h2>
+    <h1>Projects</h1>
     <div class="main">
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Puissance 4 en C" desc="Le tzatzíki est un mezzé grec et turc qui peut être utilisé comme sauce ou comme entrée. Le mot serait dérivé du turc cacık qui désigne une sorte de condiment." />
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Puissance 4 en C" desc="Le tzatzíki est un mezzé grec et turc qui peut être utilisé comme sauce ou comme entrée. Le mot serait dérivé du turc cacık qui désigne une sorte de condiment." />
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Puissance 4 en C" desc="Le tzatzíki est un mezzé grec et turc qui peut être utilisé comme sauce ou comme entrée. Le mot serait dérivé du turc cacık qui désigne une sorte de condiment." />
+        <h2>2023</h2>
+        <Projet class="item" img="images/durandnico.png" title="Ce site" desc="Ce site me sert de 'vitrine' personnalisée. Une presentation sommaire de mes compétences en développement et de mon investissement" :chips="['Website', 'NuxtJs', 'Personnel']"/>
+        <Projet class="item" img="images/accueil.png" title="AP8" desc="L'AP8 est une application tablette re-configurable de gestion, controle et test des systèmes d'alarmes VIGInet" :chips="['Applicatif', 'ElectronJs', 'VueJs', 'NodeJS', 'SCRUM', 'Professionnel']"/>
+        <Projet class="item" :cover="false" img="images/iapau_round.png" title="IA Pau" desc="Réalisation d'une application pour IA Pau permettant la création et l'administration de data challenges." :chips="['Website', 'MySQL', 'Team', 'Universitaire']"/>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Irréductible palois"  :chips="['Website', 'MySQL', 'Universitaire']"/>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Démineur"  :chips="['Game', 'C', 'X11', 'Universitaire']"/>
+
+        <h2>2022</h2>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="OwOption" desc="Un site web permettant la gestion de compte, répartition d'élèves dans leurs options via un algorithme de mariage stabe" :chips="['Website', 'Team', 'Universitaire']"/>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Huffman" desc="Programme de compression du codage de Huffman en binaire avec gestion des arguments d'entrés" :chips="['C', 'Compression', 'Binaire', 'Team', 'Universitaire']" />
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Analyse de données"  :chips="['Bash', 'Team', 'Universitaire']" />
+
+        <h2>2021</h2>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Puissance 4" desc="Un jeu de puissance 4 avec la possibilité de jouer contre une IA utilisant l'algorithme minimax" :chips="['Game', 'C', 'IA', 'Universitaire']" />
+
     </div>
 </template>
 
@@ -13,18 +25,25 @@
 
 <style scoped>
 
-h2 {
+h1 {
     width: 65%;
     margin: 0 auto;
     margin-top: 1rem;
     text-align:left;
 }
 
+h2 {
+    position: relative;
+    left: 5%;
+    width: 100%;
+    margin-top: 3rem;
+}
 .main {
     position: relative;
     max-width: 75%;
     margin: 0 auto;
-    margin-top: 2rem;
+    padding: 0;
+    margin-bottom: 0;
     gap:1.5rem;
 }
 
