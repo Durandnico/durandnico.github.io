@@ -10,7 +10,8 @@
         </div>
         
         <footer>
-            <SocialMedia class="hidden-lg-and-up" />
+            <SocialMedia class="hidden-lg-and-up hidden-xs" />
+            <SocialMedia class="hidden-sm-and-up vertical" />
         </footer>
     </v-app>
 </template>
@@ -45,5 +46,9 @@ footer {
     bottom: 40px;
     right:25px;
     z-index: 100;
+}
+
+.vertical {
+    flex-direction: column !important;
 }
 </style>
