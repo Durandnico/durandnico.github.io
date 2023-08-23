@@ -5,7 +5,7 @@
         <Projet class="item" img="images/durandnico.png" title="Ce site" desc="Ce site me sert de 'vitrine' personnalisée. Une presentation sommaire de mes compétences en développement et de mon investissement" :chips="['Website', 'NuxtJs', 'Personnel']"/>
         <Projet class="item" img="images/accueil.png" title="AP8" desc="L'AP8 est une application tablette re-configurable de gestion, controle et test des systèmes d'alarmes VIGInet" :chips="['Applicatif', 'ElectronJs', 'VueJs', 'NodeJS', 'SCRUM', 'Professionnel']"/>
         <Projet class="item" :cover="false" img="images/iapau_round.png" title="IA Pau" desc="Réalisation d'une application pour IA Pau permettant la création et l'administration de data challenges." :chips="['Website', 'MySQL', 'Team', 'Universitaire']"/>
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Irréductible palois"  :chips="['Website', 'MySQL', 'Universitaire']"/>
+        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Irréductible palois" desc="File rouge de mon 2ème semetre en 1ère année, Site web sur ma famille de CY Tech avec une page de vente et gestion des utilisateurs" :chips="['Website', 'MySQL', 'Universitaire']"/>
         <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Démineur"  :chips="['Game', 'C', 'X11', 'Universitaire']"/>
 
         <h2>2022</h2>

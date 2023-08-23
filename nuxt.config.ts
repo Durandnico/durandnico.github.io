@@ -6,6 +6,14 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-icon'
   ],
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: "durandnico",
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
+  },
   vuetify: {
     /* vuetify options */
     vuetifyOptions: {
