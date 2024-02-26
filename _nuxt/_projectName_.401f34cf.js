@@ -1,0 +1,1 @@
+import{d as a,A as t,k as o,l as s,m as r,t as n,B as c}from"./entry.f6ac660b.js";const _=a({__name:"[projectName]",setup(p){const{projectName:e}=t().params;return(l,m)=>(o(),s("div",null,[r("p",null,"project details for "+n(c(e)),1)]))}});export{_ as default};
