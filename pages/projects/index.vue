@@ -1,7 +1,12 @@
 <template>
-    <h1>Projects</h1>
+   <h1>Projects</h1>
     <div class="main">
+        <h2>2024</h2>
+        <Projet class="item" :cover="false" img="images/NN.png" title="Neural network C++" desc="Developpement de ma propre librairy de réseau neuronal artificiel et autre algorithmes de prédictions en C++" :chips="['IA', 'C++', 'Neural Network', 'Personnel']"/>
+
         <h2>2023</h2>
+        <Projet class="item" img="images/prezzup.png" title="Data battle IA Pau" desc="Analyse audiovisuelle d'un pitch vidéo via intelligence artificielle pour l'entreprise Prezzup" :chips="['IA', 'PyTorch', 'Analyse audiovisuelle', 'whisper', 'mediapipe', 'Personnel']"/>
+        <Projet class="item" :cover="false" img="images/Spotiflop.png" title="Spotiflop" desc="Site web de streaming audio personnel" :chips="['Website', 'JEE', 'Springboot', 'VueJs', 'PostgresSQL', 'Team', 'Universitaire']"/>
         <Projet class="item" img="images/durandnico.png" title="Ce site" desc="Ce site me sert de 'vitrine' personnalisée. Une presentation sommaire de mes compétences en développement et de mon investissement" :chips="['Website', 'NuxtJs', 'Personnel']"/>
         <Projet class="item" img="images/accueil.png" title="AP8" desc="L'AP8 est une application tablette re-configurable de gestion, controle et test des systèmes d'alarmes VIGInet" :chips="['Applicatif', 'ElectronJs', 'VueJs', 'NodeJS', 'SCRUM', 'Professionnel']"/>
         <Projet class="item" :cover="false" img="images/iapau_round.png" title="IA Pau" desc="Réalisation d'une application pour IA Pau permettant la création et l'administration de data challenges." :chips="['Website', 'MySQL', 'Team', 'Universitaire']"/>
@@ -9,18 +14,16 @@
         <Projet class="item" img="images/minesweeper.png" title="Démineur"  :chips="['Game', 'C', 'X11', 'Universitaire']"/>
 
         <h2>2022</h2>
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="OwOption" desc="Un site web permettant la gestion de compte, répartition d'élèves dans leurs options via un algorithme de mariage stabe" :chips="['Website', 'Team', 'Universitaire']"/>
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Huffman" desc="Programme de compression du codage de Huffman en binaire avec gestion des arguments d'entrés" :chips="['C', 'Compression', 'Binaire', 'Team', 'Universitaire']" />
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Analyse de données"  :chips="['Bash', 'Team', 'Universitaire']" />
+        <Projet class="item" img="images/owo.png" title="OwOption" desc="Un site web permettant la gestion de compte, répartition d'élèves dans leurs options via un algorithme de mariage stabe" :chips="['Website', 'Team', 'Universitaire']"/>
+        <Projet class="item" img="images/huffman.png" title="Huffman" desc="Programme de compression du codage de Huffman en binaire avec gestion des arguments d'entrés" :chips="['C', 'Compression', 'Binaire', 'Team', 'Universitaire']" />
 
         <h2>2021</h2>
-        <Projet class="item" img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" title="Puissance 4" desc="Un jeu de puissance 4 avec la possibilité de jouer contre une IA utilisant l'algorithme minimax" :chips="['Game', 'C', 'IA', 'Universitaire']" />
+        <Projet class="item" img="images/p4.png" title="Puissance 4" desc="Un jeu de puissance 4 avec la possibilité de jouer contre une IA utilisant l'algorithme minimax" :chips="['Game', 'C', 'IA', 'Universitaire']" />
 
     </div>
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
